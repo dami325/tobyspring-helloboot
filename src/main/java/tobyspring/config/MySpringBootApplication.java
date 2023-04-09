@@ -1,8 +1,11 @@
-package tobyspring.helloboot;
+package tobyspring.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Import;
+import tobyspring.config.EnableMyAutoConfiguration;
+import tobyspring.config.autoconfig.DispatcherServletConfig;
+import tobyspring.config.autoconfig.TomcatWebServerConfig;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,6 +16,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) // CLASS INTERFACE ENUM 에게 적용됨
 @Configuration
 @ComponentScan
-public @interface MySpringBootAnnotation {
+@EnableMyAutoConfiguration
+public @interface MySpringBootApplication {
 
 }
