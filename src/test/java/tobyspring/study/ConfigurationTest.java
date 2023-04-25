@@ -26,6 +26,7 @@ public class ConfigurationTest {
         Common common() {
             return new Common();
         }
+
         @Bean
         Bean1 bean1() {
             return new Bean1(common());
